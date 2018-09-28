@@ -21,7 +21,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh 'echo Tag test fitchure'
+        sh 'echo Tag test t1'
       }
     }
   }
