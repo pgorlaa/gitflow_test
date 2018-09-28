@@ -13,6 +13,7 @@ pipeline {
       }
       steps {
         sh 'echo Deploy dev test a'
+        sh 'git flow release start release'
       }
     }
 
@@ -21,8 +22,12 @@ pipeline {
         expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh 'echo Tag test t1'
+        sh ''
       }
+    }
+
+    stage('deployment') {
+        input 'Do you approve deployment?'
     }
   }
 }
