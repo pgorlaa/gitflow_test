@@ -22,12 +22,12 @@ pipeline {
         expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh ''
+        sh 'masteeeeer'
       }
     }
 
     stage('deployment') {
-        input 'Do you approve deployment?'
+        message 'Ready to go? Proceed or Abort'
     }
   }
 }
