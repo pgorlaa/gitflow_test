@@ -22,7 +22,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh 'masteeeeer'
+        sh 'echo masteeeeer'
         input 'Deploy to Production?'
       }
     }
