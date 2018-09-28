@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Tag') {
+    stage('Deploy dev') {
       when {
         expression { env.BRANCH_NAME == 'dev' }
       }
