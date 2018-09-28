@@ -13,7 +13,8 @@ pipeline {
       }
       steps {
         sh 'echo Deploy dev test a'
-        sh 'git flow release start release'
+        // sh 'git flow release start release'
+        input 'Deploy to Production?'
       }
     }
 
@@ -23,7 +24,6 @@ pipeline {
       }
       steps {
         sh 'echo masteeeeer'
-        input 'Deploy to Production?'
       }
     }
   }
