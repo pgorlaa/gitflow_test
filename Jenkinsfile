@@ -18,6 +18,12 @@ pipeline {
       }
     }
 
+    stage('Release') {
+      steps {
+          sh 'echo release'
+      }
+    }
+
     stage('Tag') {
       when {
         expression { env.BRANCH_NAME == 'master' }
