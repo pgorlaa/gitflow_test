@@ -12,9 +12,9 @@ pipeline {
         expression { env.BRANCH_NAME == 'develop' }
       }
       steps {
+        input 'Deploy to Convox?'
         sh 'echo Deploy dev test a'
         // sh 'git flow release start release'
-        input 'Deploy to Production?'
       }
     }
 
