@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-          sh 'Test'
+          sh 'echo Test'
       }
     }
 
@@ -12,7 +12,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'dev' }
       }
       steps {
-        sh 'Deploy dev test'
+        sh 'echo Deploy dev test'
       }
     }
 
@@ -21,7 +21,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh 'Tag test'
+        sh 'echo Tag test'
       }
     }
   }
