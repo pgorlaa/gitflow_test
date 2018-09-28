@@ -23,11 +23,8 @@ pipeline {
       }
       steps {
         sh 'masteeeeer'
+        input 'Deploy to Production?'
       }
-    }
-
-    stage('deployment') {
-        message 'Ready to go? Proceed or Abort'
     }
   }
 }
